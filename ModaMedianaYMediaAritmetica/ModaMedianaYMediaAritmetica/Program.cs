@@ -4,15 +4,15 @@ namespace ModaMedianaYMediaAritmetica
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Moda()
         {
-            int [] arregloModa = new int[] { 19, 8, 29, 35, 19, 28, 15,19 };
+            int[] arregloModa = new int[] { 19, 8, 29, 35, 19, 28, 15, 19 };
 
             int[] listadoArregloModa = new int[arregloModa.Length];
 
             Array.Sort(arregloModa);
 
-   
+
 
             for (int i = 0; i < arregloModa.Length; i++)
             {
@@ -48,6 +48,42 @@ namespace ModaMedianaYMediaAritmetica
 
             Console.ReadKey();
             Console.Clear();
+        }
+        
+        public static void Mediana()
+        {
+            int[] arregloMediana = new int[] { 2, 5, 8, 11, 16, 21, 30 };
+            int mediana;
+            int promedioMediana = arregloMediana.Length / 2;
+
+            Array.Sort(arregloMediana);
+
+            for (int i = 0; i < arregloMediana.Length; i++)
+            {
+                Console.WriteLine("Los valores son: {0}", arregloMediana[i]);
+                Console.WriteLine("");
+            }
+
+            if (arregloMediana.Length % 2 == 0)
+            {
+                mediana = (arregloMediana[promedioMediana - 1] + arregloMediana[promedioMediana]) / 2;
+
+                Console.WriteLine("La Mediana es: {0}", mediana);
+            }
+            else
+            {
+                mediana = arregloMediana[promedioMediana];
+                Console.WriteLine("La Mediana es: {0}",mediana);
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        static void Main(string[] args)
+        {
+            //Moda();
+            Mediana();
         }
     }
 }
