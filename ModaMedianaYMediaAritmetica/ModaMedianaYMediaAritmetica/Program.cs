@@ -95,7 +95,10 @@ namespace ModaMedianaYMediaAritmetica
 
             Console.WriteLine("La Sumatoria es: {0}", sumaMediaAritmetica);
             Console.WriteLine("La Cantidad de numeros son: {0}", cantidadNumeros);
-            Console.WriteLine("La Media Aritmetica es: {0}", sumaMediaAritmetica / cantidadNumeros);
+
+            decimal mediaAritmetica = sumaMediaAritmetica / cantidadNumeros;
+            
+            Console.WriteLine("La Media Aritmetica es: {0}", mediaAritmetica);
 
             Console.ReadKey();
             Console.Clear();
