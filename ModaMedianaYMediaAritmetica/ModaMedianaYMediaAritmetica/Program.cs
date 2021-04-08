@@ -80,10 +80,32 @@ namespace ModaMedianaYMediaAritmetica
             Console.Clear();
         }
 
+        public static void MediaAritmetica()
+        {
+            int[] arregloMediaAritmetica = new int[] { 2, 5, 5, 6, 8, 8, 9, 11 };
+
+            int cantidadNumeros = arregloMediaAritmetica.Length;
+
+            decimal sumaMediaAritmetica = 0;
+            for (int i = 0; i < arregloMediaAritmetica.Length; i++)
+            {
+                sumaMediaAritmetica += arregloMediaAritmetica[i];
+                Console.WriteLine("Encuentre la Media del conjunto: {0}", arregloMediaAritmetica[i]);
+            }
+
+            Console.WriteLine("La Sumatoria es: {0}", sumaMediaAritmetica);
+            Console.WriteLine("La Cantidad de numeros son: {0}", cantidadNumeros);
+            Console.WriteLine("La Media Aritmetica es: {0}", sumaMediaAritmetica / cantidadNumeros);
+
+            Console.ReadKey();
+            Console.Clear();
+        }
+
         static void Main(string[] args)
         {
             //Moda();
-            Mediana();
+            //Mediana();
+            MediaAritmetica();
         }
     }
 }
